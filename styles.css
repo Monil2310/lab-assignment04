@@ -19,7 +19,7 @@ header {
 }
 
 main {
-    background-color: rgba(255, 255, 255, 0.2); /* White background with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.2); 
     flex: 1;
     padding: 20px;
     display: flex;
@@ -71,7 +71,6 @@ footer {
     padding: 0.1em 0;
 }
 
-/* Search Section */
 #search {
     border: 1px solid #ddd;
     padding: 20px;
@@ -80,7 +79,6 @@ footer {
     background-color: #f9f9f9;
 }
 
-/* Buttons */
 button {
     background-color: #eb6a6a;
     border: none;
@@ -96,11 +94,10 @@ button:hover {
     display: none;
 }
 
-/* Results Section */
 #results {
     position: relative;
     border: 1px solid #ddd;
-    padding-top: 320px; /* Increase top padding to make space for the GIF */
+    padding-top: 320px; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     background-color: #fff;
@@ -111,29 +108,26 @@ button:hover {
     margin-right: auto;
 }
 
-/* GIF Container */
+
 #resultGifContainer {
     background-image: url('/Users/monilshah/Desktop/lab-4/newgif.gif');
-    background-size: contain; /* Adjust this as needed */
+    background-size: contain; 
     background-position: center;
-    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+    background-repeat: no-repeat; 
     height: 300px;
     width: 300px;
     position: absolute;
-    top: 10px; /* Adjust as necessary */
+    top: 10px;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    transform: translateX(-50%); 
     border-radius: 8px;
 }
 
-/* Result Content */
 #resultContent {
     position: relative;
     text-align: center;
-    /* Add padding or other styles as needed */
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     input[type="text"], button {
         width: 100%;
@@ -167,7 +161,6 @@ button:hover {
     background-color: #f9f9f9;
 }
 
-/* Responsive Design */
 @media (max-width: 800px) {
     .data-container {
         flex-direction: column;

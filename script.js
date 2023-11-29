@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const geoButton = document.getElementById('geoButton');
 
     searchButton.addEventListener('click', () => {
-        console.log("Search button clicked"); // Add this line
+        console.log("Search button clicked"); 
         const location = document.getElementById('locationInput').value;
         if (location) {
             getCoordinates(location);
@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
+
 function getCoordinates(location) {
-    clearResults(); // Clear previous results and errors
+    clearResults(); 
 
     const geocodeApiUrl = `https://geocode.maps.co/search?q=${location}`;
     fetch(geocodeApiUrl)
@@ -45,17 +46,14 @@ function getCoordinates(location) {
                 showError('Location not found');
             }
         })
-        .catch(error => showError(error)); // Handles network or other fetch errors
-}
+        .catch(error => showError(error)); 
+    }
 
 
 function getSunriseSunset(latitude, longitude) {
     const dates = getFormattedDates();
-    console.log("Today's date:", dates.today); // Example: '2023-11-28'
-    console.log("Tomorrow's date:", dates.tomorrow); // Example: '2023-11-29'
-
-    // https://api.sunrisesunset.io/json?lat=38.907192&lng=-77.036873&timezone=UTC&date=2023-11-29
-
+    console.log("Today's date:", dates.today); 
+    console.log("Tomorrow's date:", dates.tomorrow); 
     const apiUrlToday = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&timezone=UTC&date=${dates.today}`;
     const apiUrlTomorrow = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&timezone=UTC&date=${dates.tomorrow}`;
 
@@ -68,7 +66,6 @@ function getSunriseSunset(latitude, longitude) {
             console.log("Today's sunrise-sunset data:", dataToday.results);
             console.log("Tomorrow's sunrise-sunset data:", dataTomorrow.results);
             updateUI(dataToday.results, dataTomorrow.results);
-            // Update UI or handle data
         } else {
             showError('Error fetching sunrise and sunset data');
         }
@@ -130,27 +127,25 @@ function clearResults() {
 
     resultContent.innerHTML = '';
     resultsElement.classList.add('hidden');
-    placeholderElement.classList.remove('hidden'); // Show placeholder again
-}
+    placeholderElement.classList.remove('hidden'); 
+}    
 
 
 
 function showError(message) {
     const resultsElement = document.getElementById('results');
     const resultContent = document.getElementById('resultContent');
-    resultContent.innerHTML = `<p class="error">${message}</p>`; // Display error message
-    resultsElement.classList.remove('hidden'); // Show the results section with error
+    resultContent.innerHTML = `<p class="error">${message}</p>`; 
+    resultsElement.classList.remove('hidden'); 
 }
+
 function showError(error) {
     let message = '';
     if (typeof error === 'string') {
-        // If the error is a string, display it directly
         message = error;
     } else if (error && error.message) {
-        // If the error is an object with a message, use it
         message = error.message;
     } else {
-        // Default error message if none is provided
         message = 'An unexpected error occurred. Please try again.';
     }
 
@@ -159,4 +154,3 @@ function showError(error) {
     resultContent.innerHTML = `<p class="error">${message}</p>`;
     resultsElement.classList.remove('hidden');
 }
-
