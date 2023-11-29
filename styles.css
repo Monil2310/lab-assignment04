@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('/Users/monilshah/Desktop/lab-4/sunset1.jpeg');
+    background-image: url('/Users/monilshah/Desktop/lab-4/lab-assignment04/sunset1.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -110,7 +110,7 @@ button:hover {
 
 
 #resultGifContainer {
-    background-image: url('/Users/monilshah/Desktop/lab-4/newgif.gif');
+    background-image: url('/Users/monilshah/Desktop/lab-4/lab/lab-assignment04/newgif.gif');
     background-size: contain; 
     background-position: center;
     background-repeat: no-repeat; 
@@ -142,7 +142,7 @@ button:hover {
 /*  for mobile */
 @media (max-width: 600px) {
     body {
-        background-image: url('path/to/your/mobile-background-image.jpg');
+        background-image: url('/Users/monilshah/Desktop/lab-4/lab-assignment04/sunset1.jpeg');
     }
 }
 
