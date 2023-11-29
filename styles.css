@@ -1,0 +1,176 @@
+body {
+    font-family: serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('/Users/monilshah/Desktop/lab-4/sunset1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #eb6a6a;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.2); /* White background with 80% opacity */
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+#placeholder {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 40%;
+    max-width: 450px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Additional styling as needed */
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.1em 0;
+}
+
+/* Search Section */
+#search {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+}
+
+/* Buttons */
+button {
+    background-color: #eb6a6a;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #d95454;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Results Section */
+#results {
+    position: relative;
+    border: 1px solid #ddd;
+    padding-top: 320px; /* Increase top padding to make space for the GIF */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    width: 80%;
+    max-width: 650px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GIF Container */
+#resultGifContainer {
+    background-image: url('/Users/monilshah/Desktop/lab-4/newgif.gif');
+    background-size: contain; /* Adjust this as needed */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 10px; /* Adjust as necessary */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    border-radius: 8px;
+}
+
+/* Result Content */
+#resultContent {
+    position: relative;
+    text-align: center;
+    /* Add padding or other styles as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    input[type="text"], button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #search, #results {
+        width: 90%;
+    }
+}
+
+/*  for mobile */
+@media (max-width: 600px) {
+    body {
+        background-image: url('path/to/your/mobile-background-image.jpg');
+    }
+}
+
+.data-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.data-column {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .data-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
